@@ -15,5 +15,5 @@ router.get('/additives', controller.get)
 //register routes...
 
 module.exports = function(app) {
-  app.use('/', router);
+  app.use('/data', router);
 };
