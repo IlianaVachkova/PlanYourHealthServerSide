@@ -30,7 +30,9 @@ module.exports = function(FoodAdditive) {
   }
 
   function post(req, res) {
+    console.log(req.body);
     let foodAdditive = new FoodAdditive(req.body);
+    
     foodAdditive.save(function(err) {
       if (err) {
         throw err;

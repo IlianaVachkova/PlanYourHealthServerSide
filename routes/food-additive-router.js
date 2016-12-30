@@ -10,7 +10,7 @@ let controller = require('../controllers/food-additives')(FoodAdditive);
 
 router.get('/additives', controller.get)
   .get('/additive/:id', controller.getById)
-  .post('/', controller.post);
+  .post('/additives', controller.post);
 
 //register routes...
 
