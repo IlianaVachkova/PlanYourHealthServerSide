@@ -2,13 +2,13 @@
 
 let fs = require('fs');
 
-module.exports = function(app) {
+module.exports = function(app, data) {
   fs.readdir('./routes', function(err, files) {
     if (err) {
       throw err;
     }
 
     files.filter(file => file.indexOf('-router') >= 0)
-      .forEach(file => require(`${__dirname}/${file}`)(app));
+      .forEach(file => require(`${__dirname}/${file}`)(app,data));
   });
 };
