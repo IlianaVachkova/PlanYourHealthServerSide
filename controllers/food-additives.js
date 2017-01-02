@@ -6,7 +6,7 @@ module.exports = function(FoodAdditive) {
   function get(req, res) {
     FoodAdditive.find({}, function(err, foodAdditives) {
       if (err) {
-        throw err;
+        console.log(err);
       }
       res.json({
         result: foodAdditives
@@ -35,7 +35,7 @@ module.exports = function(FoodAdditive) {
     
     foodAdditive.save(function(err) {
       if (err) {
-        throw err;
+        console.log(err);
       }
 
       res.status(201)
